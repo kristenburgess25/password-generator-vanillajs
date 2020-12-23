@@ -60,38 +60,38 @@ function generatePassword(upper, lower, number, symbol, length){
     return finalPassword;
 }
 
-// passwordBtn.addEventListener('click', () => {
-//     const length = +lengthEl.value;
-//     const hasUpper = upperEl.checked;
-//     const hasLower = lowerEl.checked;
-//     const hasNumber = numberEl.checked;
-//     const hasSymbol = symbolEl.checked;
+passwordBtn.addEventListener('click', () => {
+    const length = +lengthEl.value;
+    const hasUpper = upperEl.checked;
+    const hasLower = lowerEl.checked;
+    const hasNumber = numberEl.checked;
+    const hasSymbol = symbolEl.checked;
 
-// passwordText.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
-// });
+passwordText.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, length);
+});
 
-function handlePrompts() {
-    let length = prompt("How long do you want your password to be? Please choose a number between 8 and 128")
-    // need to also validate that input is numerical, can't be letters 
-    let isValidNumber = /^\d*$/.test(length)
-    if(!isValidNumber) {
-        alert("Please input a valid number.")
-        return
-    }
-    if(length < 8 || length > 128) {
-        alert("Please choose a valid length.")
-        return
-    } 
+// function handlePrompts() {
+//     let length = prompt("How long do you want your password to be? Please choose a number between 8 and 128")
+//     // need to also validate that input is numerical, can't be letters 
+//     let isValidNumber = /^\d*$/.test(length)
+//     if(!isValidNumber) {
+//         alert("Please input a valid number.")
+//         return
+//     }
+//     if(length < 8 || length > 128) {
+//         alert("Please choose a valid length.")
+//         return
+//     } 
 
-    let hasUpper = confirm("Would you like your password to contain uppercase letters?")
-    let hasLower = confirm("Would you like your password to contain lowercase letters?")
-    let hasNumber = confirm("Would like your password to contain numbers?")
-    let hasSymbols = confirm("Would you like your password to contain symbols?")
+//     let hasUpper = confirm("Would you like your password to contain uppercase letters?")
+//     let hasLower = confirm("Would you like your password to contain lowercase letters?")
+//     let hasNumber = confirm("Would like your password to contain numbers?")
+//     let hasSymbols = confirm("Would you like your password to contain symbols?")
     
-    console.log("length", length, "hasUpper?", hasUpper, "hasLower?", hasLower, "hasNumber?", hasNumber, "hasSymbols?", hasSymbols);
+//     console.log("length", length, "hasUpper?", hasUpper, "hasLower?", hasLower, "hasNumber?", hasNumber, "hasSymbols?", hasSymbols);
  
-    passwordText.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbols, length);
-}
+//     passwordText.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbols, length);
+// }
 
 
 
